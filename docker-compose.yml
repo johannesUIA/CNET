@@ -21,10 +21,10 @@ services:
     restart: always
     #Specify Environment Variables for mysql
     environment:
-      MYSQL_ROOT_PASSWORD: Reficio
+      MYSQL_ROOT_PASSWORD: "1"
       MYSQL_USER: root
-      MYSQL_PASSWORD: Reficio
-      MYSQL_DATABASE: ReficioDB
+      MYSQL_PASSWORD: "1"
+      MYSQL_DATABASE: cnet
   #Api  Service
   api:
     build:
