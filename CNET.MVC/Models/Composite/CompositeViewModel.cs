@@ -1,0 +1,7 @@
+﻿namespace CNET.MVC.Models.Composite;
+
+public class CompositeViewModel
+{
+    public CheckListViewModel CheckList { get; set; }
+    public ServiceFormViewModel ServiceForm { get; set; }
+}

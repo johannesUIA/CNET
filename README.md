@@ -1,4 +1,4 @@
-![Nøsted logo](https://raw.githubusercontent.com/Prosjekt2023/Reficio/main/bacit-dotnet.MVC/wwwroot/nlogo.png)
+![Nøsted logo](https://raw.githubusercontent.com/Prosjekt2023/Reficio/main/CNET.MVC/wwwroot/nlogo.png)
 
 ## Før du begynner, er det noen forberedelser du bør ha på plass:
 ## Docker-Desktop-installasjon:
@@ -15,7 +15,7 @@
 
 
 * Denne skal følge dette formatet:
-    * server=localhost; user=root; database=ReficioDB; port=3306; password=Reficio`
+    * server=localhost; user=root; database=CNET; port=3306; password=1`
     * Dersom du kjører database og server på samme maskin, kan du bruke `localhost` eller `172.17.0.1` som IP-adresse
     * Det er anbefalt å bruke port 3306, da dette er standard for MySQL og MariaDB
 
@@ -26,7 +26,7 @@
 
 
 ```docker
-docker run --name Reficio -e MYSQL_ROOT_PASSWORD=Reficio -p 3306:3306 -d mariadb:latest
+docker run --name CNET -e MYSQL_ROOT_PASSWORD=1 -p 3306:3306 -d mariadb:latest
 ```
 
 ```
@@ -37,21 +37,21 @@ docker ps
 3. Koble til container og logg på som root.
 
   ```
-  docker exec -it Reficio bash
+  docker exec -it CNET bash
   ```
 ```
   mariadb -u root -p 
   ```
 
-4. Skriv inn PASSORD som ble satt ved opprettelse av konteiner. I dette tilfellet: Reficio
+4. Skriv inn PASSORD som ble satt ved opprettelse av konteiner. I dette tilfellet: 1
 
   ```
-  Enter password: Reficio 
+  Enter password: 1
   ```
-5. Bruk SQL kommando 
+5. Bruk SQL kommando
 
 ```
-  USE DATABASE ReficioDB;
+  USE DATABASE CNET;
 ```
 6. Opprett alle samsvarende tabeller for web-applikasjon:
 ```
