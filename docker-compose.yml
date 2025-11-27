@@ -9,8 +9,8 @@ volumes:
 services:
   #DataBase Service
   database:
-    #Pull the latest mysql image
-    image: mariadb:latest
+    #Use a maintained MariaDB release
+    image: mariadb:11.4
     #Map port 3306 on the mysql container to port 3306 in the host
     ports:
       - "3306:3306"
