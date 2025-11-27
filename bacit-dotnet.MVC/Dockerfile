@@ -9,12 +9,9 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 COPY ["bacit-dotnet.MVC.csproj", "."]
 COPY ["nuget.config", "."]
-# Restore with the project configuration available
-RUN dotnet restore --configfile nuget.config "bacit-dotnet.MVC.csproj"
-
-# Bring in the full source after restore to keep layer caching effective
+RUN dotnet restore
 COPY . .
-RUN dotnet build -c Release
+RUN dotnet build -c Release --no-restore
 
 FROM build AS publish
 RUN dotnet publish -c Release -o /app/publish --no-restore
