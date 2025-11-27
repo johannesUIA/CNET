@@ -1,6 +1,6 @@
-drop database if exists ReficioDB;
-create database if not exists ReficioDB;
-use ReficioDB;
+drop database if exists CNET;
+create database if not exists CNET;
+use CNET;
 
 create table if not EXISTS Users
 (
