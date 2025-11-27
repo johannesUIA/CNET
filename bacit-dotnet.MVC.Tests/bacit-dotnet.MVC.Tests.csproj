@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+codex/create-update-branch-for-dependencies-sq0o67
     <TargetFramework>net10.0</TargetFramework>
     <RootNamespace>bacit_dotnet.MVC.Tests</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
