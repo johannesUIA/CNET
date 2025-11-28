@@ -15,11 +15,12 @@ Før du starter trenger du:
   - Last ned fra den offisielle siden: <https://www.docker.com/products/docker-desktop/>
   - Installer og start Docker Desktop.
 
-2. (Valgfritt) **.NET 8 SDK**
-  - Kun nødvendig hvis du vil kjøre applikasjonen direkte via `dotnet run` uten Docker.
-  - Kan hentes fra: <https://dotnet.microsoft.com/download>
+2. ### Kjøringsmiljø
 
----
+  - Denne løsningen er designet for å kjøres i containere.  
+  - All funksjonalitet (web-applikasjon + database) forutsetter Docker og Docker Compose.  
+  - Kjøring uten Docker (`dotnet run` direkte på host) er ikke en del av den støttede konfigurasjonen.
+
 
 ## Kjøre prosjektet med Docker (anbefalt)
 
