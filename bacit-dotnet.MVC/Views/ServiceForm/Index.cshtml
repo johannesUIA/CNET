@@ -1,5 +1,5 @@
 @model bacit_dotnet.MVC.Models.Composite.ServiceFormViewModel
-
+@inject IWebHostEnvironment Env
 @{
     // Setting the title for the page
     ViewData["Title"] = "Serviceskjema";
@@ -16,6 +16,7 @@
     <!-- Linking the external stylesheet-->
     <link rel="stylesheet" href="/css/ServiceForm.css">
     <script src="/js/yearOptions.js" defer></script>
+    <script src="/js/autofillServiceForm.js" defer></script>
 </head>
 
 <body>
@@ -208,10 +209,22 @@
             </div>
         </div>
 
-        <!-- Submit button -->
+        
+        <!-- Autofill + Submit buttons -->
         <div class="form-group">
             <div class="form-row center-row">
-                <input type="submit" value="Send inn skjema" class="btn btn-primary custom-button"/>
+
+                @if (Env.IsDevelopment())
+                {
+                    <button type="button"
+                            id="autofillServiceForm"
+                            class="btn btn-secondary custom-button"
+                            style="margin-right: 1rem;">
+                        Autofyll testdata
+                    </button>
+                }
+
+                <input type="submit" value="Send inn skjema" class="btn btn-primary custom-button" />
             </div>
         </div>
 
